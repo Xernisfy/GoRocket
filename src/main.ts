@@ -10,6 +10,9 @@ const rocketUrl = "https://thesilphroad.com/rocket-invasions";
 const germanNames =
   "https://bulbapedia.bulbagarden.net/wiki/List_of_German_Pok%C3%A9mon_names";
 
+const encoder = new TextEncoder();
+const encode = encoder.encode.bind(encoder);
+
 class Pokemon {
   constructor(
     public species: string,
@@ -37,6 +40,15 @@ class Boss {
   ) {
     Boss.bosses.push(this);
   }
+}
+
+function sortBy<T extends { [key in U]: any }, U extends string>(
+  a: T[],
+  p: U,
+): T[] {
+  return a.sort(function (a: T, b: T): number {
+    return a[p] > b[p] ? 1 : -1;
+  });
 }
 
 function query(element: Element, selector: string): string {
@@ -85,115 +97,23 @@ const nameTranslations: [string, [string, number]][] =
     return [texts[2], [texts[3], parseInt(texts[0])]];
   });
 
-console.log(`<!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Pokémon Go Rocket Rüpel/Bosse</title>
-      <style>
-        * {
-          font-family: sans-serif;
-        }
-        img {
-          display: block;
-        }
-      </style>
-    </head>
-    <body>
-      Rüpel:
-      <select id="grunts"></select>
-      Boss:
-      <select id="bosses"></select>
-      <table>
-        <thead>
-          <tr>
-            <th>1.</th>
-            <th>2.</th>
-            <th>3.</th>
-          </tr>
-        </thead>
-        <tbody id="team"></tbody>
-      </table>
-      <script>
-        const grunts = ${
-  JSON.stringify(Grunt.grunts.sort((a, b) => a.quote > b.quote ? 1 : -1))
-};
-        const bosses = ${
-  JSON.stringify(Boss.bosses.sort((a, b) => a.name > b.name ? 1 : -1))
-};
-        const translations = {
-          quotes: new Map(${JSON.stringify(quoteTranslations)}),
-          types: new Map(${JSON.stringify(typeTranslations)}),
-          pokemon: new Map(${JSON.stringify(nameTranslations)}),
-        };
-        const gruntSelect = document.getElementById("grunts");
-        gruntSelect.append(
-          ...grunts.map((grunt) => {
-            const option = document.createElement("option");
-            option.innerText = translations.quotes.get(grunt.quote);
-            return option;
-          })
-        );
-        gruntSelect.value = "";
-        gruntSelect.addEventListener("input", function () {
-          bossSelect.value = "";
-          const grunt = grunts[this.selectedIndex];
-          fill(grunt.slots);
-        });
-        const bossSelect = document.getElementById("bosses");
-        bossSelect.append(
-          ...bosses.map((boss) => {
-            const option = document.createElement("option");
-            option.innerText = boss.name
-              .replace("Leader", "Boss")
-              .replace("Decoy Grunt", "Boss Attrappe");
-            return option;
-          })
-        );
-        bossSelect.value = "";
-        bossSelect.addEventListener("input", function () {
-          gruntSelect.value = "";
-          const boss = bosses[this.selectedIndex];
-          fill(boss.slots);
-        });
-        const team = document.getElementById("team");
-        function fill(slots) {
-          team.innerHTML = "";
-          const p = [[], [], []];
-          for (let i = 0; i < 3; i++) {
-            const row = document.createElement("tr");
-            team.appendChild(row);
-            for (let j = 0; j < 3; j++) {
-              const cel = document.createElement("td");
-              row.appendChild(cel);
-              p[j].push(cel);
-            }
-          }
-          for (const slot in p) {
-            for (const position in p[slot]) {
-              const pokemon = document.createElement("div");
-              if (slots[slot][position]) {
-                const translation = translations.pokemon.get(slots[slot][position].species);
-                const name = document.createElement("label");
-                name.innerText = translation[0];
-                const ctch = document.createElement("input");
-                ctch.type = "checkbox";
-                ctch.disabled = true;
-                ctch.checked = slots[slot][position].canBeCaught;
-                const shiny = document.createElement("input");
-                shiny.type = "checkbox";
-                shiny.disabled = true;
-                shiny.checked = slots[slot][position].canBeShiny;
-                const icon = document.createElement("img");
-                icon.src = \`https://assets.thesilphroad.com/img/pokemon/icons/96x96/\${translation[1]}.png\`;
-                pokemon.append(name, ctch, shiny, icon);
-              }
-              p[slot][position].appendChild(pokemon);
-            }
-          }
-        }
-      </script>
-    </body>
-  </html>
-`);
+Deno.writeFile(
+  "./out/grunts.js",
+  encode(
+    `const grunts = ${JSON.stringify(sortBy(Grunt.grunts, "quote"), null, 2)};`,
+  ),
+);
+Deno.writeFile(
+  "./out/bosses.js",
+  encode(
+    `const bosses = ${JSON.stringify(sortBy(Boss.bosses, "name"), null, 2)};`,
+  ),
+);
+Deno.writeFile(
+  "./out/translations.js",
+  encode(`const translations = {
+  quotes: new Map(${JSON.stringify(quoteTranslations)}),
+  types: new Map(${JSON.stringify(typeTranslations)}),
+  pokemon: new Map(${JSON.stringify(nameTranslations)}),
+};`),
+);
