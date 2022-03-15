@@ -7,11 +7,8 @@ import {
 import { quoteTranslations, typeTranslations } from "./translations.ts";
 
 const rocketUrl = "https://thesilphroad.com/rocket-invasions";
-const germanNames =
-  "https://bulbapedia.bulbagarden.net/wiki/List_of_German_Pok%C3%A9mon_names";
 
-const encoder = new TextEncoder();
-const encode = encoder.encode.bind(encoder);
+const encode = (textEncoder => textEncoder.encode.bind(textEncoder))(new TextEncoder());
 
 class Pokemon {
   constructor(
@@ -86,17 +83,6 @@ async function parse(url: string): Promise<HTMLDocument> {
     }
   });
 
-const nameTranslations: [string, [string, number]][] =
-  ([...(await parse(germanNames)).querySelectorAll(
-    "table.roundy > tbody > tr",
-  )] as Element[]).filter((row) => row.children[0].tagName === "TD").slice(
-    0,
-    -3,
-  ).map((t) => {
-    const texts = [...t.children].map((child) => child.innerText.trimEnd());
-    return [texts[2], [texts[3], parseInt(texts[0])]];
-  });
-
 Deno.writeFile(
   "./out/grunts.js",
   encode(
@@ -114,6 +100,5 @@ Deno.writeFile(
   encode(`const translations = {
   quotes: new Map(${JSON.stringify(quoteTranslations)}),
   types: new Map(${JSON.stringify(typeTranslations)}),
-  pokemon: new Map(${JSON.stringify(nameTranslations)}),
 };`),
 );

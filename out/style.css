@@ -3,4 +3,6 @@
 }
 img {
   display: block;
+  height: 128px;
+  width: 128px;
 }
