@@ -11,12 +11,12 @@ const bosses = [
       ],
       [
         {
-          "species": "Raticate",
+          "species": "Weepinbell",
           "canBeCaught": true,
           "canBeShiny": false
         },
         {
-          "species": "Weepinbell",
+          "species": "Raticate",
           "canBeCaught": true,
           "canBeShiny": false
         }
@@ -47,12 +47,12 @@ const bosses = [
       ],
       [
         {
-          "species": "Nidoking",
+          "species": "Kingler",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Kingler",
+          "species": "Nidoking",
           "canBeCaught": false,
           "canBeShiny": false
         },
@@ -83,6 +83,11 @@ const bosses = [
       ],
       [
         {
+          "species": "Blastoise",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
+        {
           "species": "Steelix",
           "canBeCaught": false,
           "canBeShiny": false
@@ -91,21 +96,16 @@ const bosses = [
           "species": "Charizard",
           "canBeCaught": false,
           "canBeShiny": false
-        },
-        {
-          "species": "Blastoise",
-          "canBeCaught": false,
-          "canBeShiny": false
         }
       ],
       [
         {
-          "species": "Dragonite",
+          "species": "Scizor",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Scizor",
+          "species": "Dragonite",
           "canBeCaught": false,
           "canBeShiny": false
         },
@@ -129,7 +129,7 @@ const bosses = [
       ],
       [
         {
-          "species": "Electivire",
+          "species": "Omastar",
           "canBeCaught": false,
           "canBeShiny": false
         },
@@ -139,7 +139,7 @@ const bosses = [
           "canBeShiny": false
         },
         {
-          "species": "Omastar",
+          "species": "Electivire",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -175,17 +175,17 @@ const bosses = [
       ],
       [
         {
-          "species": "Exeggutor",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
-        {
           "species": "Lapras",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
           "species": "Sharpedo",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
+        {
+          "species": "Exeggutor",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -197,12 +197,12 @@ const bosses = [
           "canBeShiny": false
         },
         {
-          "species": "Shiftry",
+          "species": "Swampert",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Swampert",
+          "species": "Shiftry",
           "canBeCaught": false,
           "canBeShiny": false
         }

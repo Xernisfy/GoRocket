@@ -32,6 +32,11 @@ const grunts = [
           "species": "Hypno",
           "canBeCaught": false,
           "canBeShiny": false
+        },
+        {
+          "species": "Metang",
+          "canBeCaught": false,
+          "canBeShiny": false
         }
       ]
     ]
@@ -42,12 +47,12 @@ const grunts = [
     "slots": [
       [
         {
-          "species": "Murkrow",
+          "species": "Starly",
           "canBeCaught": true,
           "canBeShiny": false
         },
         {
-          "species": "Starly",
+          "species": "Murkrow",
           "canBeCaught": true,
           "canBeShiny": false
         },
@@ -59,12 +64,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Golbat",
+          "species": "Staravia",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Staravia",
+          "species": "Golbat",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -101,12 +106,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Kirlia",
+          "species": "Snubbull",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Snubbull",
+          "species": "Kirlia",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -160,12 +165,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Muk",
+          "species": "Weezing",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Weezing",
+          "species": "Muk",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -217,12 +222,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Gardevoir",
+          "species": "Poliwrath",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Poliwrath",
+          "species": "Gardevoir",
           "canBeCaught": false,
           "canBeShiny": false
         },
@@ -234,12 +239,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Gyarados",
+          "species": "Dragonite",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Dragonite",
+          "species": "Gyarados",
           "canBeCaught": false,
           "canBeShiny": false
         },
@@ -274,6 +279,11 @@ const grunts = [
       ],
       [
         {
+          "species": "Quilava",
+          "canBeCaught": true,
+          "canBeShiny": false
+        },
+        {
           "species": "Bayleef",
           "canBeCaught": true,
           "canBeShiny": false
@@ -282,19 +292,9 @@ const grunts = [
           "species": "Croconaw",
           "canBeCaught": true,
           "canBeShiny": false
-        },
-        {
-          "species": "Quilava",
-          "canBeCaught": true,
-          "canBeShiny": false
         }
       ],
       [
-        {
-          "species": "Feraligatr",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
         {
           "species": "Meganium",
           "canBeCaught": false,
@@ -302,6 +302,11 @@ const grunts = [
         },
         {
           "species": "Typhlosion",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
+        {
+          "species": "Feraligatr",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -353,12 +358,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Electrode",
+          "species": "Voltorb",
           "canBeCaught": true,
           "canBeShiny": false
         },
         {
-          "species": "Voltorb",
+          "species": "Electrode",
           "canBeCaught": true,
           "canBeShiny": false
         }
@@ -378,34 +383,29 @@ const grunts = [
     "slots": [
       [
         {
-          "species": "Venomoth",
-          "canBeCaught": true,
-          "canBeShiny": false
-        },
-        {
           "species": "Weedle",
           "canBeCaught": true,
           "canBeShiny": false
+        },
+        {
+          "species": "Venomoth",
+          "canBeCaught": true,
+          "canBeShiny": false
         }
       ],
       [
-        {
-          "species": "Beedrill",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
         {
           "species": "Skorupi",
-          "canBeCaught": false,
+          "canBeCaught": true,
+          "canBeShiny": false
+        },
+        {
+          "species": "Beedrill",
+          "canBeCaught": true,
           "canBeShiny": false
         }
       ],
       [
-        {
-          "species": "Forretress",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
         {
           "species": "Pinsir",
           "canBeCaught": false,
@@ -413,6 +413,11 @@ const grunts = [
         },
         {
           "species": "Scizor",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
+        {
+          "species": "Forretress",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -474,12 +479,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Lileep",
+          "species": "Anorith",
           "canBeCaught": true,
           "canBeShiny": false
         },
         {
-          "species": "Anorith",
+          "species": "Lileep",
           "canBeCaught": true,
           "canBeShiny": false
         }
@@ -518,12 +523,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Bibarel",
+          "species": "Exploud",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Exploud",
+          "species": "Bibarel",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -642,29 +647,34 @@ const grunts = [
     "slots": [
       [
         {
-          "species": "Hitmonchan",
+          "species": "Hitmonlee",
           "canBeCaught": true,
           "canBeShiny": false
         },
         {
-          "species": "Hitmonlee",
+          "species": "Hitmonchan",
           "canBeCaught": true,
           "canBeShiny": false
         }
       ],
       [
-        {
-          "species": "Makuhita",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
         {
           "species": "Machop",
           "canBeCaught": false,
           "canBeShiny": false
+        },
+        {
+          "species": "Makuhita",
+          "canBeCaught": false,
+          "canBeShiny": false
         }
       ],
       [
+        {
+          "species": "Hariyama",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
         {
           "species": "Hitmonlee",
           "canBeCaught": false,
@@ -672,11 +682,6 @@ const grunts = [
         },
         {
           "species": "Hitmonchan",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
-        {
-          "species": "Hariyama",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -702,28 +707,28 @@ const grunts = [
       [
         {
           "species": "Cacturne",
-          "canBeCaught": false,
+          "canBeCaught": true,
           "canBeShiny": false
         },
         {
           "species": "Nuzleaf",
-          "canBeCaught": false,
+          "canBeCaught": true,
           "canBeShiny": false
         },
         {
           "species": "Sableye",
-          "canBeCaught": false,
+          "canBeCaught": true,
           "canBeShiny": false
         }
       ],
       [
         {
-          "species": "Sharpedo",
+          "species": "Shiftry",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Shiftry",
+          "species": "Sharpedo",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -773,12 +778,12 @@ const grunts = [
     "slots": [
       [
         {
-          "species": "Swinub",
+          "species": "Spheal",
           "canBeCaught": true,
           "canBeShiny": false
         },
         {
-          "species": "Spheal",
+          "species": "Swinub",
           "canBeCaught": true,
           "canBeShiny": false
         }
@@ -797,12 +802,12 @@ const grunts = [
       ],
       [
         {
-          "species": "Abomasnow",
+          "species": "Lapras",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Lapras",
+          "species": "Abomasnow",
           "canBeCaught": false,
           "canBeShiny": false
         }
