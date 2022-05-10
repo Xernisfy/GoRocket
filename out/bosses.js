@@ -47,12 +47,7 @@ const bosses = [
       ],
       [
         {
-          "species": "Kingler",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
-        {
-          "species": "Nidoking",
+          "species": "Honchkrow",
           "canBeCaught": false,
           "canBeShiny": false
         },
@@ -60,11 +55,16 @@ const bosses = [
           "species": "Rhyperior",
           "canBeCaught": false,
           "canBeShiny": false
+        },
+        {
+          "species": "Gyarados",
+          "canBeCaught": false,
+          "canBeShiny": false
         }
       ],
       [
         {
-          "species": "Lugia",
+          "species": "Latias",
           "canBeCaught": true,
           "canBeShiny": false
         }
@@ -76,24 +76,24 @@ const bosses = [
     "slots": [
       [
         {
-          "species": "Bagon",
+          "species": "Exeggcute",
           "canBeCaught": true,
           "canBeShiny": true
         }
       ],
       [
         {
-          "species": "Blastoise",
+          "species": "Dragonite",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Steelix",
+          "species": "Salamence",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Charizard",
+          "species": "Alolan Exeggutor",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -105,12 +105,12 @@ const bosses = [
           "canBeShiny": false
         },
         {
-          "species": "Dragonite",
+          "species": "Gardevoir",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Salamence",
+          "species": "Steelix",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -122,24 +122,24 @@ const bosses = [
     "slots": [
       [
         {
-          "species": "Teddiursa",
+          "species": "Cubone",
           "canBeCaught": true,
           "canBeShiny": true
         }
       ],
       [
         {
-          "species": "Omastar",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
-        {
-          "species": "Marowak",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
-        {
           "species": "Electivire",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
+        {
+          "species": "Luxray",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
+        {
+          "species": "Omastar",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -151,7 +151,7 @@ const bosses = [
           "canBeShiny": false
         },
         {
-          "species": "Torterra",
+          "species": "Charizard",
           "canBeCaught": false,
           "canBeShiny": false
         },
@@ -168,24 +168,24 @@ const bosses = [
     "slots": [
       [
         {
-          "species": "Poliwag",
+          "species": "Drowzee",
           "canBeCaught": true,
           "canBeShiny": true
         }
       ],
       [
         {
-          "species": "Lapras",
-          "canBeCaught": false,
-          "canBeShiny": false
-        },
-        {
           "species": "Sharpedo",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Exeggutor",
+          "species": "Blaziken",
+          "canBeCaught": false,
+          "canBeShiny": false
+        },
+        {
+          "species": "Lapras",
           "canBeCaught": false,
           "canBeShiny": false
         }
@@ -197,12 +197,12 @@ const bosses = [
           "canBeShiny": false
         },
         {
-          "species": "Swampert",
+          "species": "Shiftry",
           "canBeCaught": false,
           "canBeShiny": false
         },
         {
-          "species": "Shiftry",
+          "species": "Nidoqueen",
           "canBeCaught": false,
           "canBeShiny": false
         }
