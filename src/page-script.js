@@ -46,7 +46,8 @@ async function fill(slots) {
     for (const position in p[slot]) {
       const pokemon = document.createElement("div");
       if (slots[slot][position]) {
-        const name = slots[slot][position].species.toLowerCase().replace("♂", "-m").replace("♀", "-f");
+        const alolan = slots[slot][position].species.includes("Alolan");
+        const name = slots[slot][position].species.toLowerCase().replace("♂", "-m").replace("♀", "-f").replace(/alolan (.*)/, "$1-alola");
         const species = document.createElement("label");
         dex.getPokemonSpeciesByName(name).then(pokemonSpecies => species.innerText = pokemonSpecies.names.find(x => x.language.name === navigator.languages.find(lang => lang.length === 2)).name);
         const ctch = document.createElement("input");

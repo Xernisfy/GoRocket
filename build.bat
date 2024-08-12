@@ -10,3 +10,7 @@ copy .\src\page-script.js .\out\script.js
 copy .\src\page-style.css .\out\style.css
 
 .\out\rocket.html
+
+git add out/bosses.js out/grunts.js
+git commit -m "update encounters"
+git push
